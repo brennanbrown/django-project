@@ -10,6 +10,7 @@ colorama==0.3.7
 cryptography==2.1.4
 distro==1.5.0
 Django==1.11.11
+django-heroku
 dnspython==2.0.0
 email-validator==1.1.1
 gunicorn==20.0.4

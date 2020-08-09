@@ -11,21 +11,23 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import django_heroku
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-from portfolio.secret_settings import *
+# from portfolio.secret_settings import *
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = SECRET_KEY_X
+SECRET_KEY = os.environ.get("SECRET_KEY") or b"\x1c=\xb2\xfa?\xbcn\x91K\x9c\xe7=\x8c\xa5i\xff"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [django-brennan.herokuapp.com]
+ALLOWED_HOSTS = ["django-brennan.herokuapp.com"]
 
 
 # Application definition
@@ -79,8 +81,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'portfoliodb',
         'USER': 'postgres',
-        'PASSWORD': ENV_PASSWORD,
-        'HOST': 'localhost',
+        'PASSWORD': os.environ.get("ENV_PASSWORD"),
+        'HOST': os.environ.get("ENV_HOST") or 'localhost',
         'PORT': '5432',
     }
 }
@@ -127,3 +129,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
