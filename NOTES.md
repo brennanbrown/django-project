@@ -63,6 +63,14 @@ $ sudo apt-get install pgadmin4 pgadmin4-apache2 -y
     - Whenever creating or modifiyng models, run command.
 * Apply migrations: `python3 manage.py migrate`
 
+Accessing the DB via the terminal:
+
+* To view all of the defined databases on the server you can use the `\list` meta-command or its shortcut `\l`.
+* Often, when working with servers that manage multiple databases, you’ll find the need to jump between databases frequently. 
+    - This can be done with the `\connect` meta-command or its shortcut `\c`.
+* Once you’ve connected to a database, you will want to inspect which tables have been created there. 
+    - This can be done with the `\dt` meta-command. However, if there are no tables you will get no output.
+
 ## Admin Dashboard
 
 * Access the Django Admin dashboard: `localhost:8000/admin`
