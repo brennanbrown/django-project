@@ -67,3 +67,5 @@ $ sudo apt-get install pgadmin4 pgadmin4-apache2 -y
 
 * Access the Django Admin dashboard: `localhost:8000/admin`
     - Create admin user: `python3 manage.py createsuperuser`
+* Add static files to website: `python3 manage.py collectstatic`
+    - Combines all the static files from each individual app into one place.

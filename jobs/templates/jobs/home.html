@@ -1,3 +1,11 @@
 <h1>Hello, world!</h1>
 
+<h2>Project List:</h2>
+
+{% for job in jobs.all %}
+
+{{ job.summary }}
+
+{% endfor %}
+
 <p>Visit the <a href="/admin/">Admin Panel</a></p>
