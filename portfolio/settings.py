@@ -25,7 +25,7 @@ SECRET_KEY = SECRET_KEY_X
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [django-brennan.herokuapp.com]
 
 
 # Application definition
