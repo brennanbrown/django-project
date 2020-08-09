@@ -17,7 +17,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Django—an open-source web framework that's designed on top of Python—can help you quickly bring your website ideas to life. This project utilizes Bootstrap 4 and vanilla JavaScript for the front-end, and a PostgresSQL database, with GraphQL used for API functionality. It also uses Selenium for test-driven development. Finally, this is woll be deployed on [Heroku](https://heroku.com/) under a free Dyno plan, so I apologize for any issues regarding speed or connectivity!
+Django—an open-source web framework that's designed on top of Python—can help you quickly bring your website ideas to life. This project utilizes Bootstrap 4 and vanilla JavaScript for the front-end, and a PostgresSQL database, with GraphQL used for API functionality. It also uses Selenium for test-driven development. Finally, this is will be deployed on [Heroku](https://heroku.com/) under a free Dyno plan, so I apologize for any issues regarding speed or connectivity!
 
 For more information about specific areas of this project, please refer to my **[personal notes](https://github.com/brennanbrown/django-project/blob/master/NOTES.md)**.
 

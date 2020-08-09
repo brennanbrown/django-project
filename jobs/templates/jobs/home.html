@@ -1,11 +1,223 @@
-<h1>Hello, world!</h1>
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Brennan Brown, Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Django Project</title>
+    
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+    
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+        crossorigin="anonymous">
+    
+    <!-- Boostrap core JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" 
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" 
+        crossorigin="anonymous"></script>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'fav/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'fav/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fav/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static '/site.webmanifest' %}">
 
-<h2>Project List:</h2>
+    <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+    
+    <!-- Custom styles for this template -->
+    <link href="{% static 'main.css' %}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="text-white">About</h4>
+                        <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Contact</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="/admin/" class="text-white">Visit Admin Panel</a></li>
+                            <li><a href="https://twitter.com/brennankbrown" class="text-white">Follow on Twitter</a></li>
+                            <li><a href="https://github.com/brennanbrown/django-project" class="text-white">View Source Code</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <svg width="32" height="25" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="3" width="20" height="20" stroke="white" fill="transparent" stroke-width="5"/>
+                        <circle cx="15" cy="15" r="2" stroke="white" fill="transparent" stroke-width="2"/>
+                    </svg>
+                    <strong>Django Portfolio</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <main role="main">
+        
+        <section class="jumbotron">
+            <div class="container">
+                <img class="mx-auto d-block" src="{% static 'avatar.png' %}" height="300"></img>
+                <h1 class="text-center">Hi, I&#39;m Brennan Brown!</h1>
+                
+                <p class="text-center">
+                <a href="https://twitter.com/brennankbrown">
+                    <img src="https://img.shields.io/badge/-Twitter-1ca0f1?style=flat&amp;labelColor=1ca0f1&amp;logo=twitter&amp;logoColor=white&amp;link=https://twitter.com/brennankbrown" alt="Twitter">
+                </a>
+                
+                    <a href="https://linkedin.com/in/brennankbrown/">
+                    <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat&amp;logo=Linkedin&amp;logoColor=white&amp;link=https://linkedin.com/in/brennankbrown/" alt="Linkedin">
+                </a>
+                
+                <a href="https://medium.com/@brennanbrown">
+                    <img src="https://img.shields.io/badge/-Medium-000000?style=flat&amp;labelColor=000000&amp;logo=Medium&amp;link=https://medium.com/@brennanbrown" alt="Medium">
+                </a>
+                
+                <a href="https://wandernotebook.com">
+                    <img src="https://img.shields.io/badge/-Blog-21759B?style=flat&amp;logo=WordPress&amp;logoColor=white&amp;link=https://wandernotebook.com" alt="WordPress Blog">
+                </a>
+                
+                <a href="mailto:mail@brennanbrown.ca">
+                    <img src="https://img.shields.io/badge/-Email-c14438?style=flat&amp;logo=Gmail&amp;logoColor=white&amp;link=mailto:mail@brennanbrown.ca" alt="Email">
+                </a>
 
-{% for job in jobs.all %}
+                <a href="https://ko-fi.com/brennanbrown">
+                    <img src="https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-FF813F?style=flat&amp;logo=buy-me-a-coffee&amp;logoColor=ffffff&amp;link=https://ko-fi.com/brennanbrown" alt="Buy Me A Coffee">
+                </a>
+                
+                <img src="https://img.shields.io/badge/Pronouns-He%2FHim-brightgreen?style=flat" alt="Pronouns">
+                
+                <img src="http://img.shields.io/badge/-Open%20Source%20Fan-3DA639?style=flat&amp;logo=open-source-initiative&amp;logoColor=ffffff" alt="Open Source"></p>
+                
+                <p class="text-center">
+                    <b><a href="https://www.brennanbrown.ca">Website</a> / 
+                    <a href="https://www.brennanbrown.ca/resume.pdf">Resume</a> / 
+                    <a href="https://www.brennanbrown.ca/project">Projects</a></b> 
+                </p>
+                
+                <h2 id="about-me-wave-">About Me</h2>
 
-{{ job.summary }}
+                <p>Hey there! My name is Brennan. I&#39;m a 24-year-old Métis web developer and blogger from Winnipeg, Manitoba and currently reside in Calgary, Alberta. I just finished a Full Stack Developer Program at <a href="https://www.evolveu.ca/">EvolveU</a>, and I&#39;m looking for open-source projects to contribute to and people to collaborate with! I love creating and tinkering with small, static websites using frameworks like Jekyll or Hugo. I&#39;m a big proponent of putting an emphasis on accessibility and the <a href="https://www.a11yproject.com/">A11y project</a> in web development.</p>
+                
+                <p>I&#39;m always looking to work with people that are hopeless idealists like me, as well as who are interested in creating and working on cool, interesting, and meaningful projects! Shoot me <a href="mailto:mail@brennanbrown.ca">an e-mail</a> if that sounds like your cup of tea.</p>
+                
+                <!-- More info on badges: https://github.com/badges/shields/blob/master/doc/logos.md -->
+                
+                <h2 id="technologies-i-m-learning-books-">Technologies I&#39;m Learning</h2>
+                
+                <h4 id="software-">Software:</h4>
+                
+                <p>
+                    <img src="http://img.shields.io/badge/-Python-3776AB?style=flat-square&amp;logo=python&amp;logoColor=ffff4a" alt="Python">
+                    <img src="http://img.shields.io/badge/-Ruby-CC342D?style=flat-square&amp;logo=ruby&amp;logoColor=ffe8e8" alt="Ruby">
+                    <img src="http://img.shields.io/badge/-Java-007396?style=flat-square&amp;logo=java&amp;logoColor=ffffff" alt="Java">
+                    <img src="http://img.shields.io/badge/-Spring-6DB33F?style=flat-square&amp;logo=spring&amp;logoColor=ffffff" alt="Spring">
+                </p>
+                
+                <h4 id="front-end-">Front-end:</h4>
 
-{% endfor %}
+                <p>
+                    <img src="https://img.shields.io/badge/-Sass-%23CC6699?style=flat-square&amp;logo=sass&amp;logoColor=ffffff" alt="Sass">
+                    <img src="https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=flat-square&amp;logo=javascript&amp;logoColor=000000&amp;color=d1b01f" alt="JavaScript">
+                    <img src="https://img.shields.io/badge/-Nodejs-black?style=flat-square&amp;logo=Node.js&amp;logoColor=00d632" alt="Nodejs">
+                    <img src="https://img.shields.io/badge/-React-%23282C34?style=flat-square&amp;logo=react" alt="React">
+                    <img src="http://img.shields.io/badge/-Ruby%20on%20Rails-CC0000?style=flat-square&amp;logo=ruby-on-rails&amp;logoColor=ffffff" alt="Rails">
+                    <img src="http://img.shields.io/badge/-Jekyll-CC0000?style=flat-square&amp;logo=jekyll&amp;logoColor=ffffff" alt="Jekyll">
+                </p>
 
-<p>Visit the <a href="/admin/">Admin Panel</a></p>
+                <h4 id="back-end-">Back-end:</h4>
+
+                <p>
+                    <img src="https://img.shields.io/badge/-Redis-DC382D?style=flat-square&amp;logo=redis&amp;logoColor=ffffff" alt="Redis">
+                    <img src="https://img.shields.io/badge/-PostgreSQL-336791?style=flat-square&amp;logo=postgresql" alt="PostgreSQL">
+                    <img src="https://img.shields.io/badge/-GraphQL-E10098?style=flat-square&amp;logo=graphql&amp;logoColor=ffffff" alt="GraphQL">
+                    <img src="https://img.shields.io/badge/-Heroku-430098?style=flat-square&amp;logo=heroku&amp;logoColor=ffffff" alt="Heroku">
+                    <img src="https://img.shields.io/badge/-Docker-black?style=flat-square&amp;logo=docker" alt="Docker">
+                    <img src="http://img.shields.io/badge/-NGINX-269539?style=flat-square&amp;logo=nginx&amp;logoColor=ffffff" alt="NGINX">
+                </p>
+
+                <h4 id="editors-and-operating-systems-">Editors and Operating Systems:</h4>
+                <p><img src="http://img.shields.io/badge/-IntelliJ%20IDEA-000000?style=flat-square&amp;logo=intellij-idea&amp;logoColor=ffffff" alt="IntelliJ IDEA">
+                <img src="http://img.shields.io/badge/-VS%20Code-007ACC?style=flat-square&amp;logo=visual-studio-code&amp;logoColor=ffffff" alt="VS Code">
+                <img src="http://img.shields.io/badge/-LaTeX-008080?style=flat-square&amp;logo=latex&amp;logoColor=ffffff" alt="LaTeX">
+                <img src="http://img.shields.io/badge/-Debian-A81D33?style=flat-square&amp;logo=debian&amp;logoColor=ffffff" alt="Debian">
+                <img src="http://img.shields.io/badge/-Free%20BSD-AB2B28?style=flat-square&amp;logo=freebsd&amp;logoColor=ffffff" alt="FreeBSD">
+                <img src="http://img.shields.io/badge/-GNU%20Emacs-7F5AB6?style=flat-square&amp;logo=gnu-emacs&amp;logoColor=ffffff" alt="GNU Emacs">
+                <img src="http://img.shields.io/badge/-GNU%20Bash-000000?style=flat-square&amp;logo=gnu-bash&amp;logoColor=ffffff" alt="GNU Bash"></p>
+                <hr/>
+                <p class="text-center">
+                    <a href="mailto:mail@brennanbrown.ca" class="btn btn-primary my-2">Contact Me</a>
+                    <a href="https://github.com/brennanbrown" class="btn btn-secondary my-2">Visit my GitHub</a>
+                </p>
+            </div>
+        </section>
+        
+        <div class="album py-5 bg-light">
+            <div class="container">
+                
+                <div class="row">
+
+    {% for job in jobs.all %}
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src="{{ job.image.url }}">
+            <div class="card-body">
+                <p class="card-text">{{ job.summary }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">10 mins</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+            </div>
+        </div>
+        
+    </main>
+    
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>
+                &copy; 2020 <a href="https://django-brennan.herokuapp.com"><strong>Django Project</strong></a> ― Powered by Snakes! 🐍 | Album Theme by Bootstrap
+                <br> Created with ❤️ by Brennan K. Brown | View source code <b><a href="https://github.com/brennanbrown/django-project">here</a></b>.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>
