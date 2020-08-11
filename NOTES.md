@@ -13,6 +13,7 @@
 * Ensure you have both Python and Django installed on your machine.
 * In order to create a new Django website, simply type the command: `django-admin startproject projectname`
 * Installing each package from `requirements.txt` without errors causing halt: `requirements.txt | xargs -n 1 pip3 install`
+* If having trouble with psycopg2 package: `sudo apt-get install libpq-dev`
 
 ## Project vs. Apps
 
@@ -25,9 +26,6 @@
 * To build specific apps within your existing project:  `django-admin startapp jobs`
 
 ## Database Management
-
-* The database is where we save information about different things on our website that we want to have persist over time, and one of these is going to be the jobs on our site 
-* You can now start the database server using: `pg_ctlcluster 12 main start`
 
 Installation of PostgreSQL on Ubuntu:
 
@@ -57,11 +55,15 @@ $ sudo apt-get update
 $ sudo apt-get install pgadmin4 pgadmin4-apache2 -y
 ```
 
+* You can now start the database server using: `pg_ctlcluster 12 main start`
 * Access server from terminal: `sudo -u postgres psql postgres`
-* Create a new database in the server: `CREATE DATABASE portfolioDB;`
+* Add the password to the posgres superuser: `ALTER USER postgres PASSWORD 'newPassword';`
+* Create a new database in the server: `CREATE DATABASE portfoliodb;`
+* Create a new table with the server:`CREATE TABLE jobs;`
 * Create migrations from `models.py` to PostgreSQL DB: `python3 manage.py makemigrations`
     - Whenever creating or modifiyng models, run command.
 * Apply migrations: `python3 manage.py migrate`
+* Optimize all complete migrations: `python manage.py squashmigrations appname 000X`, where X is the latest migration.
 
 Accessing the DB via the terminal:
 
@@ -77,3 +79,10 @@ Accessing the DB via the terminal:
     - Create admin user: `python3 manage.py createsuperuser`
 * Add static files to website: `python3 manage.py collectstatic`
     - Combines all the static files from each individual app into one place.
+
+## Deployment on Heroku
+
+* The `Procfile` requires two lines:
+    - First, `release: python manage.py migrate`, to update the database with each push.
+    - Second, using gunicorn to run the `.wsgi` file: `web: gunicorn portfolio.wsgi`
+* Creating a Django superuse on Heroku: `heroku run -a appname python3 manage.py createsuperuser`

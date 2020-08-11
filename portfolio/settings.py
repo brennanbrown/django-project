@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY") or b"\x1c=\xb2\xfa?\xbcn\x91K\x9c\xe7=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["django-brennan.herokuapp.com"]
+ALLOWED_HOSTS = ["django-brennan.herokuapp.com", "localhost"]
 
 
 # Application definition
@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfoliodb',
-        'USER': 'postgres',
-        'PASSWORD': os.environ.get("ENV_PASSWORD"),
+        'NAME': os.environ.get("ENV_NAME") or 'portfoliodb',
+        'USER': os.environ.get("ENV_USER") or 'postgres',
+        'PASSWORD': os.environ.get("ENV_PASSWORD") or 'password123456',
         'HOST': os.environ.get("ENV_HOST") or 'localhost',
-        'PORT': '5432',
+        'PORT': os.environ.get("ENV_PORT") or '5432',
     }
 }
 
@@ -122,13 +122,17 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
+# https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR
+MEDIA_URL = '/media/'
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+if (os.environ.get("ENV_NAME") != None):
+    # Activate Django-Heroku.
+    django_heroku.settings(locals())
+
+    import dj_database_url
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)

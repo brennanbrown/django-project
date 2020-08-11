@@ -17,6 +17,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+View project **[here!](http://django-brennan.herokuapp.com/)**
+
 Django—an open-source web framework that's designed on top of Python—can help you quickly bring your website ideas to life. This project utilizes Bootstrap 4 and vanilla JavaScript for the front-end, and a PostgresSQL database, with GraphQL used for API functionality. It also uses Selenium for test-driven development. Finally, this is will be deployed on [Heroku](https://heroku.com/) under a free Dyno plan, so I apologize for any issues regarding speed or connectivity!
 
 For more information about specific areas of this project, please refer to my **[personal notes](https://github.com/brennanbrown/django-project/blob/master/NOTES.md)**.
@@ -38,18 +40,22 @@ For development, you will need Python 3.6 or higher, pip, venv, and PostgeSQL in
 
 #### Python installation on Ubuntu
 
-Check first to see if you have the tools required already installed:
+On Ubuntu 20.04 and later, Python 3 comes pre-installed. Check first to see if you have the tools required already installed:
 
     $ python3 --version
-    $ pip --version
+    $ pip3 --version
 
 Head over to the [official Python website](https://www.python.org/downloads/) and download the installer
-Also, be sure to have `git` available in your PATH, `npm` might need it (You can find git [here](https://git-scm.com/)).
+Also, be sure to have `git` donwloaded and available in your PATH as well.
 
 You can install Python and pip easily with apt install, just run the following commands:
 
     $ sudo apt install python3
-    $ sudo apt install pip3
+    $ sudo apt install python3-pip
+
+There are a few more packages and development tools to install to ensure that we have a robust setup for our programming environment:
+
+    $ sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
 
 If you need to update `pip`, you can make it using `pip`! Cool right? After running the following command, just open again the command line and be happy.
 
@@ -95,6 +101,12 @@ Please note for sake of ease, this project is set to work with the default confi
 
 ### Virtual Environment (`venv`)
 
+While there are a few ways to achieve a programming environment in Python, we’ll be using the venv module here, which is part of the standard Python 3 library. Let’s install venv by typing:
+
+    $ sudo apt install python3-venv
+
+Creating and entering a new virtual environment:
+
     $ python3 -m venv env
     $ . env/bin/activate
     $ pip install -r requirements.txt
@@ -107,7 +119,7 @@ You can ensure that you're in your new virutal Environment if you see `(env)` pr
 
     $ python3 manage.py runserver
 
-Once the server has started up, you can visit it at [localhost:5000/](localhost:5000/), or [127.0.0.1:5000/](127.0.0.1:5000/).
+Once the server has started up, you can visit it at [localhost:8000/](localhost:8000/), or [127.0.0.1:8000/](127.0.0.1:8000/).
 
 <!-- ROADMAP -->
 ## Roadmap

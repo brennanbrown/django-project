@@ -41,8 +41,9 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Job Detail</h1>
+          <h1 class="jumbotron-heading">{{ job.title }}</h1>
           <p class="lead text-muted">{{ job.summary }}</p>
+          <p>Completed on: {{ job.date }} | <a class="font-weight-bold" href="{{ job.hyperlink}}">View Here</a></p>
           <img src="{{ job.image.url }}" height="300" />
           <p>
             <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
