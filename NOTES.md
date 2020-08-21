@@ -7,6 +7,7 @@
   - [Project vs. Apps](#project-vs-apps)
   - [Database Management](#database-management)
   - [Admin Dashboard](#admin-dashboard)
+  - [Deployment on Heroku](#deployment-on-heroku)
 
 ## Getting Started
 
