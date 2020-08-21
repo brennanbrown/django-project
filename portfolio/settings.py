@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 import django_heroku
 
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # from portfolio.secret_settings import *
@@ -22,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get(
+SECRET_KEY = "test" or os.environ.get(
     "SECRET_KEY") or b"\x1c=\xb2\xfa?\xbcn\x91K\x9c\xe7=\x8c\xa5i\xff"
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -77,10 +76,11 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # URLs MUST follow this template: 
 # https://BUCKETNAME.s3.REGIONNAME.amazonaws.com/folder/file
 
+AWS_STORAGE_BUCKET_NAME = "django-portfolio-brennan" or os.environ.get("AWS_STORAGE_BUCKET_NAME")
+AWS_S3_REGION_NAME = "us-west-2" or os.environ.get("AWS_S3_REGION_NAME")
 AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
-AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME")
-AWS_S3_REGION_NAME = os.environ.get("AWS_S3_REGION_NAME")
+
 # Tell django-storages the domain to use to refer to static files.
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.%s.amazonaws.com' % (AWS_STORAGE_BUCKET_NAME, AWS_S3_REGION_NAME)
 AWS_S3_OBJECT_PARAMETERS = {
@@ -90,10 +90,10 @@ AWS_S3_OBJECT_PARAMETERS = {
 AWS_DEFAULT_ACL = None
 
 STATICFILES_LOCATION = 'static'
-STATICFILES_STORAGE = 'portfolio.custom_storages.StaticStorage'
+STATICFILES_STORAGE = 'portfolio.settings.StaticStorage'
 
 MEDIAFILES_LOCATION = 'media'
-DEAFULT_FILE_STORAGE = 'portfolio.custom_storages.MediaStorage'
+DEAFULT_FILE_STORAGE = 'portfolio.settings.MediaStorage'
 
 
 # Database
@@ -161,3 +161,12 @@ if (os.environ.get("ENV_NAME") != None):
     import dj_database_url
     DATABASES['default'] = dj_database_url.config(
         conn_max_age=600, ssl_require=True)
+
+from django.conf import settings
+from storages.backends.s3boto3 import S3Boto3Storage
+
+class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+
+class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
