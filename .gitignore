@@ -140,3 +140,9 @@ cython_debug/
 
 # Security
 *secret*
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+*eb-virt*
