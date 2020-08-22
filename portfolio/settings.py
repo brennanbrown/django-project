@@ -103,11 +103,11 @@ DEAFULT_FILE_STORAGE = 'portfolio.custom_storages.MediaStorage'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get("ENV_NAME") or 'portfoliodb',
-        'USER': os.environ.get("ENV_USER") or 'postgres',
-        'PASSWORD': os.environ.get("ENV_PASSWORD") or 'password123456',
-        'HOST': os.environ.get("ENV_HOST") or 'localhost',
-        'PORT': os.environ.get("ENV_PORT") or '5432',
+        'NAME': os.environ['RDS_DB_NAME'] or 'portfoliodb',
+        'USER': os.environ['RDS_USERNAME'] or 'postgres',
+        'PASSWORD': os.environ['RDS_PASSWORD'] or 'password123456',
+        'HOST': os.environ['RDS_HOSTNAME'] or 'localhost',
+        'PORT': os.environ['RDS_PORT'] or '5432',
     }
 }
 
