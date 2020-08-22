@@ -10,8 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
-from storages.backends.s3boto3 import S3Boto3Storage
-from django.conf import settings
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -22,13 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "test" or os.environ.get(
-    "SECRET_KEY") or b"\x1c=\xb2\xfa?\xbcn\x91K\x9c\xe7=\x8c\xa5i\xff"
+SECRET_KEY = b"\x1c=\xb2\xfa?\xbcn\x91K\x9c\xe7=\x8c\xa5i\xff"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["django-brennan.herokuapp.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -93,10 +90,10 @@ AWS_S3_OBJECT_PARAMETERS = {
 AWS_DEFAULT_ACL = None
 
 STATICFILES_LOCATION = 'static'
-STATICFILES_STORAGE = 'portfolio.settings.StaticStorage'
+STATICFILES_STORAGE = 'portfolio.custom_storages.StaticStorage'
 
 MEDIAFILES_LOCATION = 'media'
-DEAFULT_FILE_STORAGE = 'portfolio.settings.MediaStorage'
+DEAFULT_FILE_STORAGE = 'portfolio.custom_storages.MediaStorage'
 
 
 # Database
@@ -155,11 +152,3 @@ STATIC_ROOT = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
-
-
-class StaticStorage(S3Boto3Storage):
-    location = settings.STATICFILES_LOCATION
-
-
-class MediaStorage(S3Boto3Storage):
-    location = settings.MEDIAFILES_LOCATION
