@@ -7,6 +7,7 @@
   - [Project vs. Apps](#project-vs-apps)
   - [Database Management](#database-management)
   - [Admin Dashboard](#admin-dashboard)
+  - [Deployment on DigitalOcean](#deployment-on-digitalocean)
   - [Deployment on Heroku](#deployment-on-heroku)
 
 ## Getting Started
@@ -81,9 +82,41 @@ Accessing the DB via the terminal:
 * Add static files to website: `python3 manage.py collectstatic`
     - Combines all the static files from each individual app into one place.
 
+## Deployment on DigitalOcean
+
+* Deployment on DigitalOcean for a Django/PostgreSQL/NGINX website is well documented [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04).
+* The only thing needed to be added is `location /media/` in the file `/etc/nginx/sites-avaiable/PROJECTNAME`:
+
+```
+server {
+    listen 80;
+    server_name server_domain_or_IP;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /media/ {
+        root /home/sammy/myprojectdir;
+    }
+    location /static/ {
+        root /home/sammy/myprojectdir;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}
+```
+
+* Installation of `cert-bot` to obtain encrpyted SSL is easy to install, guide [here](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx).
+    - How to point DigitalOcean Nameservers guide [here](https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars).
+
 ## Deployment on Heroku
 
 * The `Procfile` requires two lines:
     - First, `release: python manage.py migrate`, to update the database with each push.
     - Second, using gunicorn to run the `.wsgi` file: `web: gunicorn portfolio.wsgi`
 * Creating a Django superuse on Heroku: `heroku run -a appname python3 manage.py createsuperuser`
+
+**Note**: I recommend using DigitalOcean for deployment. The official documentation for connecting Heroku to S3 is [pretty lacking](https://devcenter.heroku.com/articles/s3), as it only deals with static assets, and not media files from a db for example, this [guide](https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/) is pretty good, but for some reason, whenever the Postgres db is successfully set, Heroku puts all files in `/tmp` or locally on the site instead of using S3.
+
+AWS's Beanstalk has good documentation for [Django](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html), but requires troubleshooting for installing the pip package psycopg2 which is required for connecting with a Postgres db, this is a good solution [for that](https://stackoverflow.com/questions/17137346/psycopg2-on-amazon-elastic-beanstalk).

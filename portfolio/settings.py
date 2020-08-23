@@ -14,7 +14,6 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# from portfolio.secret_settings import *
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -25,8 +24,7 @@ SECRET_KEY = b"\x1c=\xb2\xfa?\xbcn\x91K\x9c\xe7=\x8c\xa5i\xff"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1",
-                 "django-brennan-dev.us-west-2.elasticbeanstalk.com"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 # Application definition
 
@@ -71,43 +69,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
-# AWS S3 Configuration
-# URLs MUST follow this template:
-# https://BUCKETNAME.s3.REGIONNAME.amazonaws.com/folder/file
-
-AWS_STORAGE_BUCKET_NAME = "django-portfolio-brennan" or os.environ.get(
-    "AWS_STORAGE_BUCKET_NAME")
-AWS_S3_REGION_NAME = "us-west-2" or os.environ.get("AWS_S3_REGION_NAME")
-AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
-
-# Tell django-storages the domain to use to refer to static files.
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.%s.amazonaws.com' % (
-    AWS_STORAGE_BUCKET_NAME, AWS_S3_REGION_NAME)
-AWS_S3_OBJECT_PARAMETERS = {
-    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-    'CacheControl': 'max-age=94608000',
-}
-AWS_DEFAULT_ACL = None
-
-STATICFILES_LOCATION = 'static'
-STATICFILES_STORAGE = 'portfolio.custom_storages.StaticStorage'
-
-MEDIAFILES_LOCATION = 'media'
-DEAFULT_FILE_STORAGE = 'portfolio.custom_storages.MediaStorage'
-
-
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ['RDS_DB_NAME'] or 'portfoliodb',
-        'USER': os.environ['RDS_USERNAME'] or 'postgres',
-        'PASSWORD': os.environ['RDS_PASSWORD'] or 'password123456',
-        'HOST': os.environ['RDS_HOSTNAME'] or 'localhost',
-        'PORT': os.environ['RDS_PORT'] or '5432',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get("ENV_NAME") or 'portfoliodb',
+        'USER': os.environ.get("ENV_USER") or 'postgres',
+        'PASSWORD': os.environ.get("ENV_PASSWORD") or 'password123456',
+        'HOST': os.environ.get("ENV_HOST") or 'localhost',
+        'PORT': os.environ.get("ENV_PORT") or '5432',
     }
 }
 
@@ -147,9 +119,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-
 STATIC_URL = '/static/'
-STATIC_ROOT = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+STATIC_ROOT = os.path.join(BASE_DIR, 'media')
