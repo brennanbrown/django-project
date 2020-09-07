@@ -1,14 +1,40 @@
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
 }
 
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-    }
+.jumbotron {
+    margin-bottom: -20px;
+    padding-bottom: 10px;
+}
+
+footer,
+.navbar-dark {
+    background-color: #0c3c26;
+}
+
+footer {
+    height: 80px;
+    padding-top: 20px;
+}
+
+footer a {
+    color: #64d6a2;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #4db787;
+}
+
+footer a:active {
+    color: #38996d;
+}
+
+#navbarHeader {
+    background-color: #11633e;
 }

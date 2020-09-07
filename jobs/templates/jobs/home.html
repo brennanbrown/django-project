@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Brennan Brown, Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
-    <title>Brennan's Django Project</title>
+    <title>Brennan's Django Showcase</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
@@ -34,21 +33,22 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fav/favicon-16x16.png' %}">
 
     <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#563d7c">
+    <meta name="theme-color" content="#0c3c26">
 
     <!-- Custom styles for this template -->
+    <script src="https://kit.fontawesome.com/e9dddf84a6.js" crossorigin="anonymous"></script>
     <link href="{% static 'main.css' %}" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="collapse bg-dark" id="navbarHeader">
+        <div class="collapse" id="navbarHeader">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-md-7 py-4">
                         <h4 class="text-white">About</h4>
-                        <p class="text-muted">A full-stack Django project, with a PostgreSQL database, using Selenium
-                            for tests, and deployed in real-time. Under construction.</p>
+                        <p class="text-light">This is a full-stack Django project, with a PostgreSQL database, using
+                            Selenium for tests, and deployed in real-time. Under construction.</p>
                     </div>
                     <div class="col-sm-4 offset-md-1 py-4">
                         <h4 class="text-white">Options</h4>
@@ -63,14 +63,14 @@
                 </div>
             </div>
         </div>
-        <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="navbar navbar-dark shadow-sm">
             <div class="container d-flex justify-content-between">
                 <a href="#" class="navbar-brand d-flex align-items-center">
                     <svg width="32" height="25" version="1.1" xmlns="http://www.w3.org/2000/svg">
                         <rect x="3" y="3" width="20" height="20" stroke="white" fill="transparent" stroke-width="5" />
                         <circle cx="15" cy="15" r="2" stroke="white" fill="transparent" stroke-width="2" />
                     </svg>
-                    <strong>Django Portfolio</strong>
+                    <strong>Django Showcase</strong>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
                     aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,137 +84,104 @@
 
         <section class="jumbotron">
             <div class="container">
-                <img class="mx-auto d-block" src="{% static 'avatar.png' %}" height="300"></img>
-                <h1 class="text-center">Hi, I&#39;m Brennan Brown!</h1>
+                <img class="mx-auto d-block" src="{% static 'avatar.png' %}" height="300"
+                    alt="Django Logo! Source: https://code.djangoproject.com/attachment/ticket/24953/django-hexbin.png"
+                    title="Django Logo!"></img>
+                <h1 class="text-center">Brennan's Django Showcase!</h1>
 
+                <!-- NEW BADGES-->
                 <p class="text-center">
-                    <a href="https://twitter.com/brennankbrown">
-                        <img src="https://img.shields.io/badge/-Twitter-1ca0f1?style=flat&amp;labelColor=1ca0f1&amp;logo=twitter&amp;logoColor=white&amp;link=https://twitter.com/brennankbrown"
-                            alt="Twitter">
-                    </a>
+                    <img alt="GitHub code size in bytes"
+                        src="https://img.shields.io/github/languages/code-size/brennanbrown/django-project">
 
-                    <a href="https://linkedin.com/in/brennankbrown/">
-                        <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat&amp;logo=Linkedin&amp;logoColor=white&amp;link=https://linkedin.com/in/brennankbrown/"
-                            alt="Linkedin">
-                    </a>
+                    <img alt="GitHub repo size"
+                        src="https://img.shields.io/github/repo-size/brennanbrown/django-project">
 
-                    <a href="https://medium.com/@brennanbrown">
-                        <img src="https://img.shields.io/badge/-Medium-000000?style=flat&amp;labelColor=000000&amp;logo=Medium&amp;link=https://medium.com/@brennanbrown"
-                            alt="Medium">
-                    </a>
+                    <img alt="GitHub top language"
+                        src="https://img.shields.io/github/languages/top/brennanbrown/django-project">
 
-                    <a href="https://wandernotebook.com">
-                        <img src="https://img.shields.io/badge/-Blog-21759B?style=flat&amp;logo=WordPress&amp;logoColor=white&amp;link=https://wandernotebook.com"
-                            alt="WordPress Blog">
-                    </a>
+                    <img alt="GitHub issues" src="https://img.shields.io/github/issues/brennanbrown/django-project">
 
-                    <a href="mailto:mail@brennanbrown.ca">
-                        <img src="https://img.shields.io/badge/-Email-c14438?style=flat&amp;logo=Gmail&amp;logoColor=white&amp;link=mailto:mail@brennanbrown.ca"
-                            alt="Email">
-                    </a>
+                    <img alt="GitHub last commit"
+                        src="https://img.shields.io/github/last-commit/brennanbrown/django-project">
 
-                    <a href="https://ko-fi.com/brennanbrown">
-                        <img src="https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-FF813F?style=flat&amp;logo=buy-me-a-coffee&amp;logoColor=ffffff&amp;link=https://ko-fi.com/brennanbrown"
-                            alt="Buy Me A Coffee">
-                    </a>
+                    <img alt="GitHub" src="https://img.shields.io/github/license/brennanbrown/django-project">
 
-                    <img src="https://img.shields.io/badge/Pronouns-He%2FHim-brightgreen?style=flat" alt="Pronouns">
+                    <img alt="Website"
+                        src="https://img.shields.io/website?down_color=red&down_message=Offline%21&label=Status&up_color=darkgreen&up_message=Online%21&url=https%3A%2F%2Fdjango.life">
 
-                    <img src="https://img.shields.io/badge/-Open%20Source%20Fan-3DA639?style=flat&amp;logo=open-source-initiative&amp;logoColor=ffffff"
-                        alt="Open Source"></p>
+                    <br />
 
-                <h2 id="about-me-wave-">About Me</h2>
+                    <img alt="GitHub followers"
+                        src="https://img.shields.io/github/followers/brennanbrown?label=Follow%20Me%21&style=social">
 
-                <p>Hey there! My name is Brennan. I&#39;m a 24-year-old Métis web developer and blogger from Winnipeg,
-                    Manitoba and currently reside in Calgary, Alberta. I just finished a Full Stack Developer Program at
-                    <a href="https://www.evolveu.ca/">EvolveU</a>, and I&#39;m looking for open-source projects to
-                    contribute to and people to collaborate with! I love creating and tinkering with small, static
-                    websites using frameworks like Jekyll or Hugo. I&#39;m a big proponent of putting an emphasis on
-                    accessibility and the <a href="https://www.a11yproject.com/">A11y project</a> in web development.
+                    <img alt="GitHub watchers"
+                        src="https://img.shields.io/github/watchers/brennanbrown/django-project?label=Watch%21&style=social">
+
+                    <img alt="GitHub stars"
+                        src="https://img.shields.io/github/stars/brennanbrown/django-project?label=Star%21&style=social">
+
+                    <img alt="GitHub forks"
+                        src="https://img.shields.io/github/forks/brennanbrown/django-project?label=Fork%21&style=social">
                 </p>
 
-                <p>I&#39;m always looking to work with people that are hopeless idealists like me, as well as who are
-                    interested in creating and working on cool, interesting, and meaningful projects! Shoot me <a
-                        href="mailto:mail@brennanbrown.ca">an e-mail</a> if that sounds like your cup of tea.</p>
+                <h2 id="about-django">About the Framework</h2>
 
-                <!-- More info on badges: https://github.com/badges/shields/blob/master/doc/logos.md -->
-
-                <h2 id="technologies-i-m-learning-books-">Technologies I&#39;m Learning</h2>
-
-                <h4 id="software-">Software:</h4>
-
-                <p>
-                    <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&amp;logo=python&amp;logoColor=ffff4a"
-                        alt="Python">
-                    <img src="https://img.shields.io/badge/-Ruby-CC342D?style=flat-square&amp;logo=ruby&amp;logoColor=ffe8e8"
-                        alt="Ruby">
-                    <img src="https://img.shields.io/badge/-Java-007396?style=flat-square&amp;logo=java&amp;logoColor=ffffff"
-                        alt="Java">
-                    <img src="https://img.shields.io/badge/-Spring-6DB33F?style=flat-square&amp;logo=spring&amp;logoColor=ffffff"
-                        alt="Spring">
+                <p> Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic
+                    design. Built by experienced developers, it takes care of much of the hassle of Web development, so
+                    you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
                 </p>
-
-                <h4 id="front-end-">Front-end:</h4>
-
-                <p>
-                    <img src="https://img.shields.io/badge/-Sass-%23CC6699?style=flat-square&amp;logo=sass&amp;logoColor=ffffff"
-                        alt="Sass">
-                    <img src="https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=flat-square&amp;logo=javascript&amp;logoColor=000000&amp;color=d1b01f"
-                        alt="JavaScript">
-                    <img src="https://img.shields.io/badge/-Nodejs-black?style=flat-square&amp;logo=Node.js&amp;logoColor=00d632"
-                        alt="Nodejs">
-                    <img src="https://img.shields.io/badge/-React-%23282C34?style=flat-square&amp;logo=react"
-                        alt="React">
-                    <img src="https://img.shields.io/badge/-Ruby%20on%20Rails-CC0000?style=flat-square&amp;logo=ruby-on-rails&amp;logoColor=ffffff"
-                        alt="Rails">
-                    <img src="https://img.shields.io/badge/-Jekyll-CC0000?style=flat-square&amp;logo=jekyll&amp;logoColor=ffffff"
-                        alt="Jekyll">
+                <p> This fan website was built by <a href="https://brennanbrown.ca">Brennan K. Brown</a>, as a way to
+                    teach myself how to use Django! As well as introduce people to the framework, in addition to
+                    presenting examples of popular websites and apps that currently use it!
                 </p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <h3> <i class="fas fa-fire-alt"></i> Ridiculously fast.</h3> Django was designed to help
+                        developers take applications from concept to completion as quickly as possible. Django
+                        includes
+                        dozens of extras you can use to handle common Web development tasks. Django takes care of
+                        user
+                        authentication, content administration, site maps, RSS feeds, and many more tasks — right
+                        out of
+                        the box.
+                    </li>
+                    <li class="list-group-item">
+                        <h3><i class="fas fa-lock"></i> Reassuringly secure. </h3> Django takes security seriously
+                        and
+                        helps developers avoid many common security mistakes, such as SQL injection, cross-site
+                        scripting, cross-site request forgery and clickjacking. Its user authentication system
+                        provides
+                        a secure way to manage user accounts and passwords.
+                    </li>
+                    <li class="list-group-item">
+                        <h3><i class="fas fa-stopwatch"></i> Exceedingly scalable.</h3> Some of the busiest sites on
+                        the
+                        Web leverage Django’s ability to quickly and flexibly scale. Companies, organizations and
+                        governments have used Django to build all sorts of things — from content management systems
+                        to
+                        social networks to scientific computing platforms.
+                    </li>
+                </ul>
 
-                <h4 id="back-end-">Back-end:</h4>
-
-                <p>
-                    <img src="https://img.shields.io/badge/-Redis-DC382D?style=flat-square&amp;logo=redis&amp;logoColor=ffffff"
-                        alt="Redis">
-                    <img src="https://img.shields.io/badge/-PostgreSQL-336791?style=flat-square&amp;logo=postgresql"
-                        alt="PostgreSQL">
-                    <img src="https://img.shields.io/badge/-GraphQL-E10098?style=flat-square&amp;logo=graphql&amp;logoColor=ffffff"
-                        alt="GraphQL">
-                    <img src="https://img.shields.io/badge/-Heroku-430098?style=flat-square&amp;logo=heroku&amp;logoColor=ffffff"
-                        alt="Heroku">
-                    <img src="https://img.shields.io/badge/-Docker-black?style=flat-square&amp;logo=docker"
-                        alt="Docker">
-                    <img src="https://img.shields.io/badge/-NGINX-269539?style=flat-square&amp;logo=nginx&amp;logoColor=ffffff"
-                        alt="NGINX">
-                </p>
-
-                <h4 id="editors-and-operating-systems-">Editors and Operating Systems:</h4>
-                <p><img src="https://img.shields.io/badge/-IntelliJ%20IDEA-000000?style=flat-square&amp;logo=intellij-idea&amp;logoColor=ffffff"
-                        alt="IntelliJ IDEA">
-                    <img src="https://img.shields.io/badge/-VS%20Code-007ACC?style=flat-square&amp;logo=visual-studio-code&amp;logoColor=ffffff"
-                        alt="VS Code">
-                    <img src="https://img.shields.io/badge/-LaTeX-008080?style=flat-square&amp;logo=latex&amp;logoColor=ffffff"
-                        alt="LaTeX">
-                    <img src="https://img.shields.io/badge/-Debian-A81D33?style=flat-square&amp;logo=debian&amp;logoColor=ffffff"
-                        alt="Debian">
-                    <img src="https://img.shields.io/badge/-Free%20BSD-AB2B28?style=flat-square&amp;logo=freebsd&amp;logoColor=ffffff"
-                        alt="FreeBSD">
-                    <img src="https://img.shields.io/badge/-GNU%20Emacs-7F5AB6?style=flat-square&amp;logo=gnu-emacs&amp;logoColor=ffffff"
-                        alt="GNU Emacs">
-                    <img src="https://img.shields.io/badge/-GNU%20Bash-000000?style=flat-square&amp;logo=gnu-bash&amp;logoColor=ffffff"
-                        alt="GNU Bash"></p>
                 <hr />
                 <p class="text-center">
-                    <a href="https://www.brennanbrown.ca/resume.pdf" class="btn btn-primary my-2">Download Resume</a>
-                    <a href="https://github.com/brennanbrown" class="btn btn-secondary my-2">Visit my GitHub</a>
+                    <a href="https://www.djangoproject.com/" class="btn btn-success mr-3">Learn
+                        More About Django</a>
+                    <a href="https://github.com/brennanbrown" class="btn btn-secondary">Visit my GitHub</a>
                 </p>
+                <blockquote class="blockquote text-center mt-5">
+                    <p class="mb-0">This website is in no way affiliated, endorsed, or condoned by Django Software
+                        Foundation and individual contributors. Django is a registered trademark of the Django
+                        Software Foundation.</p>
+                </blockquote>
             </div>
         </section>
 
         <div class="album py-5">
             <div class="container">
 
-                <h1 class="text-center font-weight-bold mb-5">Projects I've Worked On:</h1>
+                <h1 class="text-center font-weight-bold mb-5">Websites that use Django:</h1>
 
                 <div class="row">
 
@@ -222,7 +189,8 @@
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
                             <a href="{% url 'detail' job.id %}">
-                                <img class="card-img-top" src="{{ job.image.url }}">
+                                <img class="card-img-top" src="{{ job.image.url }}" alt="Image of {{ job.title }}"
+                                    title="{{ job.title }}">
                             </a>
                             <div class="card-body">
                                 <a href="{% url 'detail' job.id %}">
@@ -232,10 +200,9 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a href="{{ job.hyperlink}}"><button type="button"
-                                                class="btn btn-sm btn-outline-secondary">View</button></a>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                class="btn btn-sm btn-success">View</button></a>
                                     </div>
-                                    <small class="text-muted">{{ job.date }}</small>
+                                    <small class="text-muted">Created: {{ job.date }}</small>
                                 </div>
                             </div>
                         </div>
@@ -247,18 +214,16 @@
 
     </main>
 
-    <hr />
-
-    <footer class="text-muted">
+    <footer class="text-light">
         <div class="container">
-            <p class="text-right">
-                <a href="#"><b>Back to top</b></a><br>
-            </p>
-            <p>
-                &copy; 2020 <a href="https://django.life"><strong>Django Project</strong></a> ― Powered
+            <span class="float-right"><a href="#"><b>Back to Top ⯅</b></a></span>
+            <span class="float-left">&copy; 2020 <a href="https://django.life"><strong>Brennan's Django
+                        Life</strong></a> ―
+                Powered
                 by Snakes! 🐍 | Album Theme by Bootstrap
                 <br> Created with ❤️ by Brennan K. Brown | View source code <b><a
-                        href="https://github.com/brennanbrown/django-project">here</a></b>.</p>
+                        href="https://github.com/brennanbrown/django-project">here</a></b>.</span>
+
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
