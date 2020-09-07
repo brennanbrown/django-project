@@ -1,18 +1,35 @@
-# Django Project
+<h1 align="center">Brennan's Django Showcase</h1>
 
-- [Django Project](#django-project)
-  - [About The Project](#about-the-project)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-      - [Python installation on Ubuntu](#python-installation-on-ubuntu)
-      - [PostgreSQL installation on Ubuntu](#postgresql-installation-on-ubuntu)
-  - [Installation](#installation)
-    - [Virtual Environment (`venv`)](#virtual-environment-venv)
-    - [Running the project](#running-the-project)
-  - [Roadmap](#roadmap)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Contact](#contact)
+<!-- NEW BADGES-->
+<p align="center">
+<img alt="GitHub code size in bytes"
+src="https://img.shields.io/github/languages/code-size/brennanbrown/django-project"> <img alt="GitHub repo size"
+src="https://img.shields.io/github/repo-size/brennanbrown/django-project"> <img alt="GitHub top language"
+src="https://img.shields.io/github/languages/top/brennanbrown/django-project"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/brennanbrown/django-project"> <img alt="GitHub last commit"
+src="https://img.shields.io/github/last-commit/brennanbrown/django-project"> <img alt="GitHub" src="https://img.shields.io/github/license/brennanbrown/django-project"> <img alt="Website"
+src="https://img.shields.io/website?down_color=red&down_message=Offline%21&label=Status&up_color=darkgreen&up_message=Online%21&url=https%3A%2F%2Fdjango.life">
+<br />
+<img alt="GitHub followers"
+src="https://img.shields.io/github/followers/brennanbrown?label=Follow%20Me%21&style=social"> <img alt="GitHub watchers"
+src="https://img.shields.io/github/watchers/brennanbrown/django-project?label=Watch%21&style=social"> <img alt="GitHub stars"
+src="https://img.shields.io/github/stars/brennanbrown/django-project?label=Star%21&style=social"> <img alt="GitHub forks"
+src="https://img.shields.io/github/forks/brennanbrown/django-project?label=Fork%21&style=social">
+</p>
+
+**Table of Contents:**
+
+- [About The Project](#about-the-project)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+    - [Python installation on Ubuntu](#python-installation-on-ubuntu)
+    - [PostgreSQL installation on Ubuntu](#postgresql-installation-on-ubuntu)
+- [Installation](#installation)
+  - [Virtual Environment (`venv`)](#virtual-environment-venv)
+  - [Running the project](#running-the-project)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
