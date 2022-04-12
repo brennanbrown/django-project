@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY") or b"\x1c=\xb2\xfa?\xbcn\x91K\x9c\xe7=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["brennan-django.herokuapp.com"]
+ALLOWED_HOSTS = ["brennan-django.herokuapp.com", "localhost"]
 
 # Application definition
 
