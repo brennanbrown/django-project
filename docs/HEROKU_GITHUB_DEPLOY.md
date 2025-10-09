@@ -1,6 +1,6 @@
 # Heroku Deployment via GitHub Integration
 
-Your project is ready! Here's how to deploy using Heroku's GitHub integration (no CLI needed).
+Deploy your Django project using Heroku's GitHub integration (no CLI needed).
 
 ## ✅ Pre-Deployment Complete
 
@@ -27,7 +27,7 @@ Your project is ready! Here's how to deploy using Heroku's GitHub integration (n
 1. In your new Heroku app, click the **"Deploy"** tab
 2. Under "Deployment method", click **"GitHub"**
 3. Click **"Connect to GitHub"** (authorize if needed)
-4. Search for repository: **`django-project`**
+4. Search for your repository (e.g., **`django-project`**)
 5. Click **"Connect"** next to your repository
 
 ---
@@ -254,7 +254,7 @@ Heroku provides free SSL certificates automatically!
 ## Quick Reference
 
 ### Your App URLs
-- **App**: `https://your-app-name.herokuapp.com`
+- **App**: `https://your-app-name.herokuapp.com` (replace with your actual app name)
 - **Admin**: `https://your-app-name.herokuapp.com/admin`
 - **Dashboard**: `https://dashboard.heroku.com/apps/your-app-name`
 
@@ -287,7 +287,5 @@ Heroku provides free SSL certificates automatically!
 ---
 
 **Deployment Status**: ✅ Ready to deploy via GitHub!
-
-**Your changes are live on GitHub**: https://github.com/brennanbrown/django-project
 
 Just follow the steps above and you'll be live in ~5 minutes! 🚀

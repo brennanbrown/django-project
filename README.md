@@ -3,7 +3,7 @@
 <!-- NEW BADGES-->
 <p align="center">
 <img alt="Django Version" src="https://img.shields.io/badge/Django-5.1.3-green">
-<img alt="Python Version" src="https://img.shields.io/badge/Python-3.12-blue">
+<img alt="Python Version" src="https://img.shields.io/badge/Python-3.13-blue">
 <img alt="GitHub code size in bytes"
 src="https://img.shields.io/github/languages/code-size/brennanbrown/django-project"> <img alt="GitHub repo size"
 src="https://img.shields.io/github/repo-size/brennanbrown/django-project"> <img alt="GitHub top language"
@@ -18,18 +18,16 @@ src="https://img.shields.io/github/stars/brennanbrown/django-project?label=Star%
 src="https://img.shields.io/github/forks/brennanbrown/django-project?label=Fork%21&style=social">
 </p>
 
-> **🚀 Recently Updated!** This project has been upgraded to Django 5.1.3 (LTS) and Python 3.12 with enhanced security features. See [UPGRADE_GUIDE.md](UPGRADE_GUIDE.md) for details.
+> **🚀 Recently Updated!** This project has been upgraded to Django 5.1.3 (LTS) and Python 3.13 with enhanced security features. See [docs/UPGRADE_GUIDE.md](docs/UPGRADE_GUIDE.md) for details.
 
 **Table of Contents:**
 
 - [About The Project](#about-the-project)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-    - [Python installation on Ubuntu](#python-installation-on-ubuntu)
-    - [PostgreSQL installation on Ubuntu](#postgresql-installation-on-ubuntu)
 - [Installation](#installation)
-  - [Virtual Environment (`venv`)](#virtual-environment-venv)
-  - [Running the project](#running-the-project)
+- [Heroku Deployment](#heroku-deployment)
+- [Documentation](#documentation)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
@@ -49,7 +47,7 @@ For more information about specific areas of this project, please refer to my **
 
 For development, you will need **Python 3.12 or higher**, pip, venv, and PostgreSQL installed in your environment.
 
-> **Note**: If you're upgrading from an older version, please see [UPGRADE_GUIDE.md](UPGRADE_GUIDE.md) for complete migration instructions.
+> **Note**: If you're upgrading from an older version, please see [docs/UPGRADE_GUIDE.md](docs/UPGRADE_GUIDE.md) for complete migration instructions.
 
 ### Prerequisites
 
@@ -177,13 +175,13 @@ Once the server has started up, you can visit it at [localhost:8000/](localhost:
 
 ## Heroku Deployment
 
-Deploy to Heroku in 5 minutes! See [HEROKU_QUICKSTART.md](HEROKU_QUICKSTART.md) for quick deployment or [HEROKU_DEPLOYMENT.md](HEROKU_DEPLOYMENT.md) for complete documentation.
+Deploy to Heroku in 5 minutes! See [docs/HEROKU_QUICKSTART.md](docs/HEROKU_QUICKSTART.md) for quick deployment or [docs/HEROKU_DEPLOYMENT.md](docs/HEROKU_DEPLOYMENT.md) for complete documentation.
 
 ### Quick Deploy
 
 **Option 1: Automated Script**
 ```bash
-./deploy-to-heroku.sh
+./scripts/deploy-to-heroku.sh
 ```
 
 **Option 2: Manual Commands**
@@ -197,6 +195,36 @@ git push heroku main
 heroku run python manage.py createsuperuser
 heroku open
 ```
+
+**Option 3: GitHub Integration (No CLI needed)**
+
+See [docs/HEROKU_GITHUB_DEPLOY.md](docs/HEROKU_GITHUB_DEPLOY.md) for step-by-step instructions to deploy directly from GitHub via Heroku's web interface.
+
+## Documentation
+
+Complete documentation is available in the [docs/](docs/) directory:
+
+### Quick Start
+- **[Quick Start Guide](docs/QUICK_START.md)** - Get running in minutes
+- **[Heroku Quick Start](docs/HEROKU_QUICKSTART.md)** - Deploy to Heroku fast
+
+### Deployment
+- **[Heroku Deployment](docs/HEROKU_DEPLOYMENT.md)** - Complete deployment guide
+- **[Heroku GitHub Integration](docs/HEROKU_GITHUB_DEPLOY.md)** - Deploy via GitHub
+- **[Deployment Checklist](docs/HEROKU_CHECKLIST.md)** - Step-by-step checklist
+
+### Upgrade & Migration
+- **[Upgrade Guide](docs/UPGRADE_GUIDE.md)** - Django 3.0 → 5.1 migration
+- **[Changes Summary](docs/CHANGES_SUMMARY.md)** - Overview of changes
+- **[Upgrade Checklist](docs/UPGRADE_CHECKLIST.md)** - Migration checklist
+
+### Security
+- **[Security Policy](docs/SECURITY.md)** - Best practices & vulnerability reporting
+
+### Scripts
+- **[Deploy to Heroku](scripts/deploy-to-heroku.sh)** - Automated deployment script
+
+See the [docs/README.md](docs/README.md) for a complete documentation index.
 
 <!-- ROADMAP -->
 ## Roadmap

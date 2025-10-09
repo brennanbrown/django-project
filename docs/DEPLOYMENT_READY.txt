@@ -19,8 +19,8 @@ Pre-Deployment:
 Git & GitHub:
   ✅ All upgrade files committed
   ✅ Changes pushed to GitHub master branch
-  ✅ Repository: brennanbrown/django-project
-  ✅ Latest commit: "Upgrade to Django 5.1.3 and Python 3.13.5..."
+  ✅ Repository ready for deployment
+  ✅ Latest updates include Django 5.1.3 and Python 3.13.5
 
 Files Updated:
   ✅ runtime.txt → Python 3.13.5
@@ -45,7 +45,7 @@ Follow these simple steps (detailed in HEROKU_GITHUB_DEPLOY.md):
 
 1. Go to https://dashboard.heroku.com/
 2. Create new app
-3. Connect to GitHub repository (brennanbrown/django-project)
+3. Connect to your GitHub repository
 4. Add Heroku Postgres add-on
 5. Set Config Vars:
    - SECRET_KEY (generate new one)
@@ -72,9 +72,6 @@ For Additional Info:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 🔑 IMPORTANT NOTES
-
-Your GitHub Repository:
-  https://github.com/brennanbrown/django-project
 
 When Setting Config Vars in Heroku:
   ⚠️  Generate a NEW SECRET_KEY (don't use your local .env one)
