@@ -9,13 +9,10 @@
 
 ## Setup Commands (Copy & Paste)
 
-### 1. Clone and Setup Virtual Environment
+### 1. Fork and Clone Repository
 ```bash
-# Navigate to your projects directory
-cd ~/Documents/GitHub
-
-# Clone (if not already cloned)
-git clone https://github.com/brennanbrown/django-project.git
+# Fork the repository on GitHub first, then clone YOUR fork:
+git clone https://github.com/YOUR-USERNAME/django-project.git
 cd django-project
 
 # Create virtual environment with Python 3.12

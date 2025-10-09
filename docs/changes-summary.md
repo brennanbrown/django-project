@@ -2,13 +2,13 @@
 
 ## Quick Overview
 
-Your Django project has been successfully upgraded from an outdated 2020 codebase to modern, secure versions.
+This Django project has been upgraded from Django 3.0 (2020) to Django 5.1.3 (2024 LTS) with modern, secure dependencies.
 
 ### Version Changes
 
 | Component | Before | After |
 |-----------|--------|-------|
-| **Python** | 3.9.0 | 3.12.7 |
+| **Python** | 3.9.0 | 3.13.5 |
 | **Django** | 3.0.3 | 5.1.3 (LTS) |
 | **psycopg** | 2.8.5 | 3.2.3 |
 | **Pillow** | 7.0.0 | 11.0.0 |

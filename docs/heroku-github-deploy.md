@@ -2,13 +2,15 @@
 
 Deploy your Django project using Heroku's GitHub integration (no CLI needed).
 
-## ✅ Pre-Deployment Complete
+## ✅ Prerequisites
 
-- ✅ Upgraded to Django 5.1.3 and Python 3.13.5
-- ✅ All dependencies updated with security patches
-- ✅ Settings configured for environment variables
-- ✅ All changes committed and pushed to GitHub
-- ✅ Ready for deployment!
+Before deploying, ensure you have:
+
+- ✅ Django project with all changes committed
+- ✅ Code pushed to GitHub repository
+- ✅ `.env.example` file for environment variables
+- ✅ `Procfile` and `runtime.txt` configured
+- ✅ `requirements.txt` with all dependencies
 
 ---
 
@@ -16,7 +18,7 @@ Deploy your Django project using Heroku's GitHub integration (no CLI needed).
 
 1. Go to [Heroku Dashboard](https://dashboard.heroku.com/)
 2. Click **"New"** → **"Create new app"**
-3. Choose an app name (e.g., `brennan-portfolio` or `django-showcase`)
+3. Choose an app name (e.g., `my-django-app` or `portfolio-site`)
 4. Select region (United States or Europe)
 5. Click **"Create app"**
 

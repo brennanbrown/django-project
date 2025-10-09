@@ -1,4 +1,6 @@
-# Heroku Quick Start - 5 Minute Deploy
+# Heroku Quick Start
+
+Deploy your Django project to Heroku in ~5 minutes.
 
 ## Option 1: Automated Script (Easiest)
 

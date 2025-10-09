@@ -36,18 +36,28 @@ src="https://img.shields.io/github/forks/brennanbrown/django-project?label=Fork%
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-View project **[here!](http://django.life/)**
+A modern Django 5.1 portfolio/showcase website built with:
 
-Django—an open-source web framework that's designed on top of Python—can help you quickly bring your website ideas to life. This project utilizes Bootstrap 4 and vanilla JavaScript for the front-end, and a PostgresSQL database, with GraphQL used for API functionality. It also uses Selenium for test-driven development. Finally, this is will be deployed on a [DigitalOcean](https://digitalocean.com/) Droplet under their smallest plan, so I apologize for any issues regarding speed or connectivity!
+- **Backend**: Django 5.1.3 (LTS) with Python 3.13
+- **Database**: PostgreSQL with psycopg3
+- **Frontend**: Bootstrap 4 and vanilla JavaScript  
+- **Deployment**: Ready for Heroku, DigitalOcean, or AWS
+- **Features**: 
+  - Environment-based configuration
+  - Production-ready security settings
+  - Static file handling with WhiteNoise
+  - Comprehensive documentation
 
-For more information about specific areas of this project, please refer to my **[personal notes](https://github.com/brennanbrown/django-project/blob/master/NOTES.md)**.
+**Perfect for**: Portfolio sites, showcases, or as a starting template for Django projects.
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
 For development, you will need **Python 3.12 or higher**, pip, venv, and PostgreSQL installed in your environment.
 
-> **Note**: If you're upgrading from an older version, please see [docs/upgrade-guide.md](docs/upgrade-guide.md) for complete migration instructions.
+> **For Forkers**: This project is ready to fork and deploy! See [docs/quick-start.md](docs/quick-start.md) to get started.
+> 
+> **Upgrading**: If you're upgrading an older Django 3.0 project, see [docs/upgrade-guide.md](docs/upgrade-guide.md).
 
 ### Prerequisites
 
