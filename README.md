@@ -2,6 +2,8 @@
 
 <!-- NEW BADGES-->
 <p align="center">
+<img alt="Django Version" src="https://img.shields.io/badge/Django-5.1.3-green">
+<img alt="Python Version" src="https://img.shields.io/badge/Python-3.12-blue">
 <img alt="GitHub code size in bytes"
 src="https://img.shields.io/github/languages/code-size/brennanbrown/django-project"> <img alt="GitHub repo size"
 src="https://img.shields.io/github/repo-size/brennanbrown/django-project"> <img alt="GitHub top language"
@@ -15,6 +17,8 @@ src="https://img.shields.io/github/watchers/brennanbrown/django-project?label=Wa
 src="https://img.shields.io/github/stars/brennanbrown/django-project?label=Star%21&style=social"> <img alt="GitHub forks"
 src="https://img.shields.io/github/forks/brennanbrown/django-project?label=Fork%21&style=social">
 </p>
+
+> **🚀 Recently Updated!** This project has been upgraded to Django 5.1.3 (LTS) and Python 3.12 with enhanced security features. See [UPGRADE_GUIDE.md](UPGRADE_GUIDE.md) for details.
 
 **Table of Contents:**
 
@@ -43,7 +47,9 @@ For more information about specific areas of this project, please refer to my **
 <!-- GETTING STARTED -->
 ## Getting Started
 
-For development, you will need Python 3.6 or higher, pip, venv, and PostgeSQL installed in your environment.
+For development, you will need **Python 3.12 or higher**, pip, venv, and PostgreSQL installed in your environment.
+
+> **Note**: If you're upgrading from an older version, please see [UPGRADE_GUIDE.md](UPGRADE_GUIDE.md) for complete migration instructions.
 
 ### Prerequisites
 
@@ -120,23 +126,77 @@ Please note for sake of ease, this project is set to work with the default confi
 
 While there are a few ways to achieve a programming environment in Python, we’ll be using the venv module here, which is part of the standard Python 3 library. Let’s install venv by typing:
 
-    $ sudo apt install python3-venv
+    $ sudo apt install python3.12-venv
 
 Creating and entering a new virtual environment:
 
-    $ python3 -m venv env
-    $ . env/bin/activate
+    $ python3.12 -m venv env
+    $ source env/bin/activate  # On Windows: env\Scripts\activate
+    $ pip install --upgrade pip
     $ pip install -r requirements.txt
 
-You can ensure that you're in your new virutal Environment if you see `(env)` prepend your bash shell:
+You can ensure that you're in your new virtual environment if you see `(env)` prepend your bash shell:
 
     (env) user@ubuntu:~/django_project$ 
 
+### Environment Configuration
+
+Copy the example environment file and configure it:
+
+    $ cp .env.example .env
+    $ nano .env  # or use your preferred editor
+
+Generate a secure SECRET_KEY:
+
+    $ python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+
+Add the generated key and your database settings to `.env`:
+
+```
+SECRET_KEY=your-generated-secret-key
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
+DB_NAME=portfoliodb
+DB_USER=postgres
+DB_PASSWORD=your-postgres-password
+```
+
+### Database Setup
+
+Create the database and run migrations:
+
+    $ sudo -u postgres psql -c "CREATE DATABASE portfoliodb;"
+    $ python manage.py migrate
+    $ python manage.py createsuperuser
+
 ### Running the project
 
-    $ python3 manage.py runserver
+    $ python manage.py runserver
 
 Once the server has started up, you can visit it at [localhost:8000/](localhost:8000/), or [127.0.0.1:8000/](127.0.0.1:8000/).
+
+## Heroku Deployment
+
+Deploy to Heroku in 5 minutes! See [HEROKU_QUICKSTART.md](HEROKU_QUICKSTART.md) for quick deployment or [HEROKU_DEPLOYMENT.md](HEROKU_DEPLOYMENT.md) for complete documentation.
+
+### Quick Deploy
+
+**Option 1: Automated Script**
+```bash
+./deploy-to-heroku.sh
+```
+
+**Option 2: Manual Commands**
+```bash
+heroku create your-app-name
+heroku addons:create heroku-postgresql:essential-0
+heroku config:set SECRET_KEY="$(python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())')"
+heroku config:set DEBUG="False"
+heroku config:set ALLOWED_HOSTS="your-app-name.herokuapp.com"
+git push heroku main
+heroku run python manage.py createsuperuser
+heroku open
+```
 
 <!-- ROADMAP -->
 ## Roadmap
