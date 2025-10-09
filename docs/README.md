@@ -12,6 +12,7 @@ Complete documentation for the Django Portfolio Project.
 - **[Heroku Deployment Guide](heroku-deployment.md)** - Complete Heroku deployment documentation
 - **[Heroku GitHub Integration](heroku-github-deploy.md)** - Deploy via Heroku's GitHub integration
 - **[Heroku Deployment Checklist](heroku-checklist.md)** - Step-by-step deployment checklist
+- **[AWS S3 Setup](aws-s3-setup.md)** - Configure S3 for permanent media file storage
 
 ### Upgrade & Migration
 - **[Upgrade Guide](upgrade-guide.md)** - Comprehensive upgrade documentation (3.0 → 5.1)
@@ -55,6 +56,7 @@ Complete documentation for the Django Portfolio Project.
 
 ### For Deployment
 - Heroku deployment (multiple guides)
+- AWS S3 media storage setup
 - Environment configuration
 - Production settings
 - Domain setup
