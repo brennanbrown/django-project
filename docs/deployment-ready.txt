@@ -41,7 +41,7 @@ New Documentation Created:
 
 🚀 NEXT: DEPLOY ON HEROKU WEBSITE
 
-Follow these simple steps (detailed in HEROKU_GITHUB_DEPLOY.md):
+Follow these simple steps (detailed in heroku-github-deploy.md):
 
 1. Go to https://dashboard.heroku.com/
 2. Create new app
@@ -62,12 +62,12 @@ Total time: ~5 minutes ⏱️
 📖 HELPFUL GUIDES
 
 For GitHub Deployment:
-  👉 HEROKU_GITHUB_DEPLOY.md    (START HERE! Step-by-step with screenshots)
+  👉 heroku-github-deploy.md    (START HERE! Step-by-step)
 
 For Additional Info:
-  📚 HEROKU_DEPLOYMENT.md        (Complete reference)
-  📚 HEROKU_CHECKLIST.md         (Deployment checklist)
-  📚 UPGRADE_GUIDE.md            (What changed in the upgrade)
+  📚 heroku-deployment.md        (Complete reference)
+  📚 heroku-checklist.md         (Deployment checklist)
+  📚 upgrade-guide.md            (What changed in the upgrade)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -103,7 +103,7 @@ gunicorn           20.0.4      →    23.0.0
 
 ✨ YOU'RE READY!
 
-Everything on your end is complete. Just follow HEROKU_GITHUB_DEPLOY.md
+Everything on your end is complete. Just follow heroku-github-deploy.md
 to deploy via the Heroku website. No command line needed!
 
 Your app will be live at: https://your-app-name.herokuapp.com

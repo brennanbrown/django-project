@@ -281,7 +281,7 @@ Heroku provides free SSL certificates automatically!
 ## Need Help?
 
 - **Heroku Status**: https://status.heroku.com/
-- **Documentation**: See `HEROKU_DEPLOYMENT.md` for detailed info
+- **Documentation**: See `heroku-deployment.md` for detailed info
 - **Support**: https://help.heroku.com/
 
 ---

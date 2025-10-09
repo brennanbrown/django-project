@@ -170,7 +170,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "  Open admin:       heroku open /admin"
     echo "  Run migrations:   heroku run python manage.py migrate"
     echo ""
-    echo "For more information, see docs/HEROKU_DEPLOYMENT.md"
+    echo "For more information, see docs/heroku-deployment.md"
     echo ""
     
     read -p "Open app in browser? (y/n) " -n 1 -r

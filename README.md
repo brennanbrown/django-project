@@ -18,7 +18,7 @@ src="https://img.shields.io/github/stars/brennanbrown/django-project?label=Star%
 src="https://img.shields.io/github/forks/brennanbrown/django-project?label=Fork%21&style=social">
 </p>
 
-> **🚀 Recently Updated!** This project has been upgraded to Django 5.1.3 (LTS) and Python 3.13 with enhanced security features. See [docs/UPGRADE_GUIDE.md](docs/UPGRADE_GUIDE.md) for details.
+> **🚀 Recently Updated!** This project has been upgraded to Django 5.1.3 (LTS) and Python 3.13 with enhanced security features. See [docs/upgrade-guide.md](docs/upgrade-guide.md) for details.
 
 **Table of Contents:**
 
@@ -47,7 +47,7 @@ For more information about specific areas of this project, please refer to my **
 
 For development, you will need **Python 3.12 or higher**, pip, venv, and PostgreSQL installed in your environment.
 
-> **Note**: If you're upgrading from an older version, please see [docs/UPGRADE_GUIDE.md](docs/UPGRADE_GUIDE.md) for complete migration instructions.
+> **Note**: If you're upgrading from an older version, please see [docs/upgrade-guide.md](docs/upgrade-guide.md) for complete migration instructions.
 
 ### Prerequisites
 
@@ -175,7 +175,7 @@ Once the server has started up, you can visit it at [localhost:8000/](localhost:
 
 ## Heroku Deployment
 
-Deploy to Heroku in 5 minutes! See [docs/HEROKU_QUICKSTART.md](docs/HEROKU_QUICKSTART.md) for quick deployment or [docs/HEROKU_DEPLOYMENT.md](docs/HEROKU_DEPLOYMENT.md) for complete documentation.
+Deploy to Heroku in 5 minutes! See [docs/heroku-quickstart.md](docs/heroku-quickstart.md) for quick deployment or [docs/heroku-deployment.md](docs/heroku-deployment.md) for complete documentation.
 
 ### Quick Deploy
 
@@ -198,28 +198,28 @@ heroku open
 
 **Option 3: GitHub Integration (No CLI needed)**
 
-See [docs/HEROKU_GITHUB_DEPLOY.md](docs/HEROKU_GITHUB_DEPLOY.md) for step-by-step instructions to deploy directly from GitHub via Heroku's web interface.
+See [docs/heroku-github-deploy.md](docs/heroku-github-deploy.md) for step-by-step instructions to deploy directly from GitHub via Heroku's web interface.
 
 ## Documentation
 
 Complete documentation is available in the [docs/](docs/) directory:
 
 ### Quick Start
-- **[Quick Start Guide](docs/QUICK_START.md)** - Get running in minutes
-- **[Heroku Quick Start](docs/HEROKU_QUICKSTART.md)** - Deploy to Heroku fast
+- **[Quick Start Guide](docs/quick-start.md)** - Get running in minutes
+- **[Heroku Quick Start](docs/heroku-quickstart.md)** - Deploy to Heroku fast
 
 ### Deployment
-- **[Heroku Deployment](docs/HEROKU_DEPLOYMENT.md)** - Complete deployment guide
-- **[Heroku GitHub Integration](docs/HEROKU_GITHUB_DEPLOY.md)** - Deploy via GitHub
-- **[Deployment Checklist](docs/HEROKU_CHECKLIST.md)** - Step-by-step checklist
+- **[Heroku Deployment](docs/heroku-deployment.md)** - Complete deployment guide
+- **[Heroku GitHub Integration](docs/heroku-github-deploy.md)** - Deploy via GitHub
+- **[Deployment Checklist](docs/heroku-checklist.md)** - Step-by-step checklist
 
 ### Upgrade & Migration
-- **[Upgrade Guide](docs/UPGRADE_GUIDE.md)** - Django 3.0 → 5.1 migration
-- **[Changes Summary](docs/CHANGES_SUMMARY.md)** - Overview of changes
-- **[Upgrade Checklist](docs/UPGRADE_CHECKLIST.md)** - Migration checklist
+- **[Upgrade Guide](docs/upgrade-guide.md)** - Django 3.0 → 5.1 migration
+- **[Changes Summary](docs/changes-summary.md)** - Overview of changes
+- **[Upgrade Checklist](docs/upgrade-checklist.md)** - Migration checklist
 
 ### Security
-- **[Security Policy](docs/SECURITY.md)** - Best practices & vulnerability reporting
+- **[Security Policy](docs/security.md)** - Best practices & vulnerability reporting
 
 ### Scripts
 - **[Deploy to Heroku](scripts/deploy-to-heroku.sh)** - Automated deployment script

@@ -5,43 +5,43 @@ Complete documentation for the Django Portfolio Project.
 ## 📚 Table of Contents
 
 ### Quick Start Guides
-- **[Quick Start Guide](QUICK_START.md)** - Get the project running in minutes
-- **[Heroku Quick Start](HEROKU_QUICKSTART.md)** - Deploy to Heroku in 5 minutes
+- **[Quick Start Guide](quick-start.md)** - Get the project running in minutes
+- **[Heroku Quick Start](heroku-quickstart.md)** - Deploy to Heroku in 5 minutes
 
 ### Deployment
-- **[Heroku Deployment Guide](HEROKU_DEPLOYMENT.md)** - Complete Heroku deployment documentation
-- **[Heroku GitHub Integration](HEROKU_GITHUB_DEPLOY.md)** - Deploy via Heroku's GitHub integration
-- **[Heroku Deployment Checklist](HEROKU_CHECKLIST.md)** - Step-by-step deployment checklist
+- **[Heroku Deployment Guide](heroku-deployment.md)** - Complete Heroku deployment documentation
+- **[Heroku GitHub Integration](heroku-github-deploy.md)** - Deploy via Heroku's GitHub integration
+- **[Heroku Deployment Checklist](heroku-checklist.md)** - Step-by-step deployment checklist
 
 ### Upgrade & Migration
-- **[Upgrade Guide](UPGRADE_GUIDE.md)** - Comprehensive upgrade documentation (3.0 → 5.1)
-- **[Changes Summary](CHANGES_SUMMARY.md)** - Quick overview of all changes
-- **[Upgrade Checklist](UPGRADE_CHECKLIST.md)** - Migration checklist
+- **[Upgrade Guide](upgrade-guide.md)** - Comprehensive upgrade documentation (3.0 → 5.1)
+- **[Changes Summary](changes-summary.md)** - Quick overview of all changes
+- **[Upgrade Checklist](upgrade-checklist.md)** - Migration checklist
 
 ### Security
-- **[Security Policy](SECURITY.md)** - Security best practices and vulnerability reporting
+- **[Security Policy](security.md)** - Security best practices and vulnerability reporting
 
 ### Reference Files
-- **[Heroku Overview](HEROKU_README.txt)** - Visual Heroku deployment overview
-- **[Upgrade Complete](UPGRADE_COMPLETE.txt)** - Visual upgrade summary
-- **[Deployment Ready](DEPLOYMENT_READY.txt)** - Deployment readiness checklist
+- **[Heroku Overview](heroku-readme.txt)** - Visual Heroku deployment overview
+- **[Upgrade Complete](upgrade-complete.txt)** - Visual upgrade summary
+- **[Deployment Ready](deployment-ready.txt)** - Deployment readiness checklist
 
 ---
 
 ## 🚀 Getting Started
 
 **New to this project?** Start here:
-1. Read [Quick Start Guide](QUICK_START.md)
-2. For deployment, see [Heroku Quick Start](HEROKU_QUICKSTART.md)
+1. Read [Quick Start Guide](quick-start.md)
+2. For deployment, see [Heroku Quick Start](heroku-quickstart.md)
 
 **Forking this project?** 
-1. Review [Changes Summary](CHANGES_SUMMARY.md) to understand the current state
-2. Check [Security Policy](SECURITY.md) for best practices
-3. Follow [Quick Start Guide](QUICK_START.md) for local setup
+1. Review [Changes Summary](changes-summary.md) to understand the current state
+2. Check [Security Policy](security.md) for best practices
+3. Follow [Quick Start Guide](quick-start.md) for local setup
 
 **Upgrading from Django 3.0?**
-1. Read [Upgrade Guide](UPGRADE_GUIDE.md)
-2. Follow [Upgrade Checklist](UPGRADE_CHECKLIST.md)
+1. Read [Upgrade Guide](upgrade-guide.md)
+2. Follow [Upgrade Checklist](upgrade-checklist.md)
 
 ---
 
