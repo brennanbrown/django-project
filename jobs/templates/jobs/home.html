@@ -5,11 +5,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Brennan Brown, Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <title>Django Showcase</title>
+    <meta name="description" content="Discover Django Framework through real-world examples from Instagram, Spotify, NASA, and more. Learn Django with interactive showcases and tutorials.">
+    <meta name="author" content="Brennan Brown">
+    <meta property="og:title" content="Django.life - Learn Django Framework">
+    <meta property="og:description" content="Discover Django through real-world examples from top companies">
+    <meta property="og:url" content="https://django.life">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Django.life - Learn Django Framework">
+    <meta name="twitter:description" content="Discover Django through real-world examples from top companies">
+    <meta name="keywords" content="Django, Python web framework, Django examples, Django tutorial, web development, Instagram Django, Spotify Django, NASA Django">
+    <title>Django.life - Learn Django Framework with Real Examples</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+    <link rel="canonical" href="https://django.life/">
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -38,6 +46,118 @@
     <!-- Custom styles for this template -->
     <script src="https://kit.fontawesome.com/e9dddf84a6.js" crossorigin="anonymous"></script>
     <link href="{% static 'main.css' %}" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #092e20;
+            --secondary-color: #0c3c26;
+            --accent-color: #205d3b;
+            --light-accent: #4caf50;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .jumbotron {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            margin-bottom: 0;
+        }
+        
+        .display-3 {
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: -0.02em;
+        }
+        
+        .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        
+        .btn-success {
+            background: linear-gradient(45deg, var(--accent-color), var(--light-accent));
+            border: none;
+            border-radius: 25px;
+            padding: 8px 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+        }
+        
+        .lead {
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+        
+        .text-muted {
+            color: rgba(255,255,255,0.8) !important;
+        }
+        
+        .album {
+            background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 3rem 0;
+        }
+        
+        .font-weight-bold {
+            color: var(--primary-color);
+        }
+        
+        footer {
+            background: var(--primary-color) !important;
+            padding: 2rem 0;
+        }
+        
+        .navbar {
+            background: rgba(9, 46, 32, 0.95) !important;
+            backdrop-filter: blur(10px);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
+        .card:nth-child(5) { animation-delay: 0.5s; }
+        .card:nth-child(6) { animation-delay: 0.6s; }
+    </style>
 </head>
 
 <body>
@@ -47,8 +167,7 @@
                 <div class="row">
                     <div class="col-sm-8 col-md-7 py-4">
                         <h4 class="text-white">About</h4>
-                        <p class="text-light">This is a full-stack Django project, with a PostgreSQL database, using
-                            Selenium for tests, and deployed in real-time. Under construction.</p>
+                        <p class="text-light">Django.life showcases the power and versatility of Django Framework through real-world examples from top companies. Learn Django by exploring how Instagram, Spotify, NASA, and others build amazing applications.</p>
                     </div>
                     <div class="col-sm-4 offset-md-1 py-4">
                         <h4 class="text-white">Options</h4>
@@ -87,7 +206,8 @@
                 <img class="mx-auto d-block" src="{% static 'avatar.png' %}" height="300"
                     alt="Django Logo! Source: https://code.djangoproject.com/attachment/ticket/24953/django-hexbin.png"
                     title="Django Logo!"></img>
-                <h1 class="text-center">Django Showcase!</h1>
+                <h1 class="text-center display-3 font-weight-bold mb-4">Django.life</h1>
+                <p class="lead text-center text-muted mb-5">Discover Django Framework through real-world examples from the world's biggest companies</p>
 
                 <!-- NEW BADGES-->
                 <p class="text-center">
@@ -301,8 +421,7 @@
     <footer class="text-light">
         <div class="container">
             <span class="float-right"><a href="#"><b>Back to Top ⯅</b></a></span>
-            <span class="float-left">&copy; 2022 <a href="https://django.life"><strong>Django
-                        Showcase</strong></a> ―
+            <span class="float-left">&copy; 2024 <a href="https://django.life"><strong>Django.life</strong></a> ―
                 Powered
                 by Snakes! 🐍 | Album Theme by Bootstrap
                 <br> Created with ❤️ by Brennan K. Brown | View source code <b><a
