@@ -91,27 +91,45 @@ if USE_SQLITE:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-elif DATABASE_URL:
-    # Use DATABASE_URL if provided (Heroku, production)
-    DATABASES = {
-        'default': dj_database_url.config(
-            default=DATABASE_URL,
-            conn_max_age=600,
-            conn_health_checks=True,
-        )
-    }
-else:
-    # Default local development database
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.environ.get("DB_NAME", 'portfoliodb'),
-            'USER': os.environ.get("DB_USER", 'postgres'),
-            'PASSWORD': os.environ.get("DB_PASSWORD", 'postgres'),
-            'HOST': os.environ.get("DB_HOST", 'localhost'),
-            'PORT': os.environ.get("DB_PORT", '5432'),
+elif DATABASE_URL and not DATABASE_URL.startswith('sqlite'):
+    # Use DATABASE_URL if provided (Heroku, production) - but not SQLite URLs
+    try:
+        DATABASES = {
+            'default': dj_database_url.config(
+                default=DATABASE_URL,
+                conn_max_age=600,
+                conn_health_checks=True,
+            )
         }
-    }
+    except Exception:
+        # Fallback to SQLite if DATABASE_URL is invalid
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': BASE_DIR / 'db.sqlite3',
+            }
+        }
+else:
+    # Default local development database or fallback to SQLite
+    try:
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.postgresql',
+                'NAME': os.environ.get("DB_NAME", 'portfoliodb'),
+                'USER': os.environ.get("DB_USER", 'postgres'),
+                'PASSWORD': os.environ.get("DB_PASSWORD", 'postgres'),
+                'HOST': os.environ.get("DB_HOST", 'localhost'),
+                'PORT': os.environ.get("DB_PORT", '5432'),
+            }
+        }
+    except Exception:
+        # Fallback to SQLite if PostgreSQL config fails
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': BASE_DIR / 'db.sqlite3',
+            }
+        }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
