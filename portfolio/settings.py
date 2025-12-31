@@ -83,7 +83,11 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 USE_SQLITE = os.environ.get("USE_SQLITE", "False") == "True"
 DATABASE_URL = os.environ.get("DATABASE_URL")
 
-if USE_SQLITE:
+# Force SQLite if DATABASE_URL points to localhost (unavailable on Heroku)
+if DATABASE_URL and 'localhost' in DATABASE_URL:
+    DATABASE_URL = None
+
+if USE_SQLITE or not DATABASE_URL:
     # Use SQLite (for testing or when prod database is unavailable)
     DATABASES = {
         'default': {
@@ -91,8 +95,8 @@ if USE_SQLITE:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-elif DATABASE_URL and not DATABASE_URL.startswith('sqlite'):
-    # Use DATABASE_URL if provided (Heroku, production) - but not SQLite URLs
+else:
+    # Try to use DATABASE_URL, but fall back to SQLite if it fails
     try:
         DATABASES = {
             'default': dj_database_url.config(
@@ -102,28 +106,7 @@ elif DATABASE_URL and not DATABASE_URL.startswith('sqlite'):
             )
         }
     except Exception:
-        # Fallback to SQLite if DATABASE_URL is invalid
-        DATABASES = {
-            'default': {
-                'ENGINE': 'django.db.backends.sqlite3',
-                'NAME': BASE_DIR / 'db.sqlite3',
-            }
-        }
-else:
-    # Default local development database or fallback to SQLite
-    try:
-        DATABASES = {
-            'default': {
-                'ENGINE': 'django.db.backends.postgresql',
-                'NAME': os.environ.get("DB_NAME", 'portfoliodb'),
-                'USER': os.environ.get("DB_USER", 'postgres'),
-                'PASSWORD': os.environ.get("DB_PASSWORD", 'postgres'),
-                'HOST': os.environ.get("DB_HOST", 'localhost'),
-                'PORT': os.environ.get("DB_PORT", '5432'),
-            }
-        }
-    except Exception:
-        # Fallback to SQLite if PostgreSQL config fails
+        # Fallback to SQLite if DATABASE_URL parsing fails
         DATABASES = {
             'default': {
                 'ENGINE': 'django.db.backends.sqlite3',
