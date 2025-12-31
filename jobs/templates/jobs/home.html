@@ -185,29 +185,113 @@
 
                 <div class="row">
 
-                    {% for job in jobs.all %}
                     <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <a href="{% url 'detail' job.id %}">
-                                <img class="card-img-top" src="{{ job.image.url }}" alt="Image of {{ job.title }}"
-                                    title="{{ job.title }}">
-                            </a>
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Instagram-Logo.png/800px-Instagram-Logo.png" alt="Instagram Logo">
+
                             <div class="card-body">
-                                <a href="{% url 'detail' job.id %}">
-                                    <h2 class="card-title">{{ job.title }}</h2>
-                                </a>
-                                <p class="card-text">{{ job.summary }}</p>
+                                <p class="card-text font-weight-bold">Instagram</p>
+                                <p class="card-text">World's largest photo and video sharing social media platform with over 1 billion active users.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href="{{ job.hyperlink}}"><button type="button"
-                                                class="btn btn-sm btn-success">View</button></a>
+                                        <a href="https://instagram.com"><button type="button"
+                                                class="btn btn-sm btn-success">Visit</button></a>
                                     </div>
-                                    <small class="text-muted">Created: {{ job.date }}</small>
+                                    <small class="text-muted">Founded: 2010</small>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Pinterest_logo_%282%29.svg/800px-Pinterest_logo_%282%29.svg.png" alt="Pinterest Logo">
+
+                            <div class="card-body">
+                                <p class="card-text font-weight-bold">Pinterest</p>
+                                <p class="card-text">Visual discovery engine for finding ideas like recipes, home, style, and DIY inspiration.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="https://pinterest.com"><button type="button"
+                                                class="btn btn-sm btn-success">Visit</button></a>
+                                    </div>
+                                    <small class="text-muted">Founded: 2010</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Spotify_logo_without_text.svg/800px-Spotify_logo_without_text.svg.png" alt="Spotify Logo">
+
+                            <div class="card-body">
+                                <p class="card-text font-weight-bold">Spotify</p>
+                                <p class="card-text">World's most popular audio streaming platform with millions of songs and podcasts.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="https://spotify.com"><button type="button"
+                                                class="btn btn-sm btn-success">Visit</button></a>
+                                    </div>
+                                    <small class="text-muted">Founded: 2006</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/800px-NASA_logo.svg.png" alt="NASA Logo">
+
+                            <div class="card-body">
+                                <p class="card-text font-weight-bold">NASA</p>
+                                <p class="card-text">National Aeronautics and Space Administration uses Django for various web applications.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="https://nasa.gov"><button type="button"
+                                                class="btn btn-sm btn-success">Visit</button></a>
+                                    </div>
+                                    <small class="text-muted">Founded: 1958</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Disqus_logo_2017.svg/800px-Disqus_logo_2017.svg.png" alt="Disqus Logo">
+
+                            <div class="card-body">
+                                <p class="card-text font-weight-bold">Disqus</p>
+                                <p class="card-text">Global comment platform and discussion network used by millions of websites and blogs.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="https://disqus.com"><button type="button"
+                                                class="btn btn-sm btn-success">Visit</button></a>
+                                    </div>
+                                    <small class="text-muted">Founded: 2007</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mozilla_Firefox_logo_%282017-2019%29.svg/800px-Mozilla_Firefox_logo_%282017-2019%29.svg.png" alt="Mozilla Logo">
+
+                            <div class="card-body">
+                                <p class="card-text font-weight-bold">Mozilla</p>
+                                <p class="card-text">The organization behind Firefox browser uses Django for many of its web properties.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="https://mozilla.org"><button type="button"
+                                                class="btn btn-sm btn-success">Visit</button></a>
+                                    </div>
+                                    <small class="text-muted">Founded: 1998</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
