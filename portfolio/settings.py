@@ -80,9 +80,18 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 # Database configuration
+USE_SQLITE = os.environ.get("USE_SQLITE", "False") == "True"
 DATABASE_URL = os.environ.get("DATABASE_URL")
 
-if DATABASE_URL:
+if USE_SQLITE:
+    # Use SQLite (for testing or when prod database is unavailable)
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+elif DATABASE_URL:
     # Use DATABASE_URL if provided (Heroku, production)
     DATABASES = {
         'default': dj_database_url.config(
