@@ -157,6 +157,50 @@
         .card:nth-child(4) { animation-delay: 0.4s; }
         .card:nth-child(5) { animation-delay: 0.5s; }
         .card:nth-child(6) { animation-delay: 0.6s; }
+        
+        /* Resources Section Styles */
+        .bg-light {
+            background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%) !important;
+        }
+        
+        .badge {
+            padding: 6px 12px;
+            font-weight: 500;
+            border-radius: 20px;
+        }
+        
+        .btn-outline-secondary {
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+        }
+        
+        /* Resource cards hover effect */
+        .bg-light .card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .bg-light .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: rgba(9, 46, 32, 0.2);
+        }
+        
+        /* Icon circles */
+        .rounded-circle {
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover .rounded-circle {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 
@@ -415,6 +459,126 @@
                 </div>
             </div>
         </div>
+
+        <!-- Learning Resources Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h1 class="text-center font-weight-bold mb-5">Official Documentation & Tutorials</h1>
+                
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center mr-3" style="width: 50px; height: 50px;">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Django Official Tutorial</h3>
+                                </div>
+                                <p class="card-text text-muted">
+                                    The official hands-on tutorial where you build a polls application. It's comprehensive and well-written, walking you through creating a complete Django project from scratch.
+                                </p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="badge badge-success">Beginner Friendly</span>
+                                    <a href="https://docs.djangoproject.com/en/stable/intro/tutorial01/" target="_blank" class="btn btn-outline-success btn-sm">
+                                        Start Tutorial <i class="fas fa-arrow-right ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="rounded-circle bg-info text-white d-flex align-items-center justify-content-center mr-3" style="width: 50px; height: 50px;">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Django Documentation</h3>
+                                </div>
+                                <p class="card-text text-muted">
+                                    The complete official docs covering everything from models and views to deployment and security. The definitive reference for Django developers at all levels.
+                                </p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="badge badge-info">Complete Reference</span>
+                                    <a href="https://docs.djangoproject.com/" target="_blank" class="btn btn-outline-info btn-sm">
+                                        Browse Docs <i class="fas fa-arrow-right ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="rounded-circle bg-warning text-white d-flex align-items-center justify-content-center mr-3" style="width: 50px; height: 50px;">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Django Community</h3>
+                                </div>
+                                <p class="card-text text-muted">
+                                    Connect with thousands of Django developers worldwide. Get help, share knowledge, and contribute to the framework through forums, mailing lists, and Discord.
+                                </p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="badge badge-warning">Community</span>
+                                    <a href="https://www.djangoproject.com/community/" target="_blank" class="btn btn-outline-warning btn-sm">
+                                        Join Community <i class="fas fa-arrow-right ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="rounded-circle bg-danger text-white d-flex align-items-center justify-content-center mr-3" style="width: 50px; height: 50px;">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <h3 class="card-title h4 mb-0">Django Girls Tutorial</h3>
+                                </div>
+                                <p class="card-text text-muted">
+                                    A free, beginner-friendly tutorial that teaches you how to build your first web application with Django. Perfect for absolute beginners with no prior programming experience.
+                                </p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="badge badge-danger">Absolute Beginner</span>
+                                    <a href="https://tutorial.djangogirls.org/" target="_blank" class="btn btn-outline-danger btn-sm">
+                                        Start Learning <i class="fas fa-arrow-right ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Resources -->
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <h3 class="mb-4">More Learning Resources</h3>
+                            <div class="d-flex flex-wrap justify-content-center gap-2">
+                                <a href="https://github.com/django/django" target="_blank" class="btn btn-sm btn-outline-secondary">
+                                    <i class="fab fa-github mr-1"></i> Django on GitHub
+                                </a>
+                                <a href="https://code.djangoproject.com/" target="_blank" class="btn btn-sm btn-outline-secondary">
+                                    <i class="fas fa-tasks mr-1"></i> Ticket System
+                                </a>
+                                <a href="https://forum.djangoproject.com/" target="_blank" class="btn btn-sm btn-outline-secondary">
+                                    <i class="fas fa-comments mr-1"></i> Forum
+                                </a>
+                                <a href="https://www.djangoproject.com/weblog/" target="_blank" class="btn btn-sm btn-outline-secondary">
+                                    <i class="fas fa-newspaper mr-1"></i> Django Blog
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
